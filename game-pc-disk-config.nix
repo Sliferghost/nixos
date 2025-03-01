@@ -2,7 +2,7 @@
   disko.devices = {
     disk = {
       nixos = {
-        device = "/dev/nvme01n1";
+        device = "/dev/nvme0n1";
         type = "disk";
         content = {
           type = "gpt";
