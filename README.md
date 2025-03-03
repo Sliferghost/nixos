@@ -32,3 +32,17 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
 ```bash
 sudo nixos-generate-config --root /mnt
 ```
+
+## Install
+
+```bash
+sudo nixos-install
+```
+
+# Post Install
+
+## Connecto to WiFi
+
+```bash
+nmcli device wifi connect "Pick me Lara" password "<password>"
+```
