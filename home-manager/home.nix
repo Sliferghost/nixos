@@ -36,6 +36,7 @@
     ./hyprland.nix
     ./hyprpaper.nix
     ./hyprlock.nix
+    ./hypridle.nix
     ./kitty.nix
     ./lazygit.nix
     ./neovim.nix
