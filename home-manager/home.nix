@@ -5,8 +5,8 @@
     stateVersion = "24.11";
 
     pointerCursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
+      package = pkgs.catppuccin-cursors.mochaSky;
+      name = "catppuccin-mocha-sky-cursors";
       size = 24;
     };
   };
