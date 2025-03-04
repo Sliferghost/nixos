@@ -20,6 +20,7 @@
     ./bash.nix
     ./eza.nix
     ./firefox.nix
+    ./fzf.nix
     ./git.nix
     ./ghostty.nix
     ./lazygit.nix
