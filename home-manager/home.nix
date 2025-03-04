@@ -26,6 +26,7 @@
     ./neovim.nix
     ./ssh.nix
     ./starship.nix
+    ./wofi.nix
     ./zoxide.nix
     ./zsh.nix
   ];
