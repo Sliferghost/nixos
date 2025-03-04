@@ -6,7 +6,7 @@
     let
       cursor = "catppuccin-mocha-mauve-cursors";
       terminal = "kitty";
-      fileManager = "";
+      fileManager = "kitty --class yazi -e 'yazi'";
       menu = "wofi --show drun";
     in {
       monitor = ",preferred,auto,auto";
@@ -31,7 +31,7 @@
         "$mod, Return, exec, ${terminal}"
 	"$mod, C, killactive"
 	"$mod, M, exit"
-	# "$mod, E, exec, ${fileManager}"
+	"$mod, E, exec, ${fileManager}"
 	"$mod, Space, exec, ${menu}"
 	"$mod, V, exec, ${terminal} --class clipse -e 'clipse'"
 
