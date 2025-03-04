@@ -5,8 +5,7 @@
       mainBar = {
         layer = "top";
 	position = "top";
-	height = 30;
-	spacing = 4;
+	spacing = 10;
 	output = [ "HDMI-A-1" ];
 
 	modules-left = [
@@ -24,11 +23,11 @@
 
 	"network" = {
 	  #interface = "wlp2*"; # (Optional) To force the use of this interface
-	  format-wifi = "{essid} ({signalStrength}%) <U+F1EB>";
-	  format-ethernet = "{ipaddr}/{cidr} <U+F796>";
-	  tooltip-format = "{ifname} via {gwaddr} <U+F796>";
-	  format-linked = "{ifname} (No IP) <U+F796>";
-	  format-disconnected = "Disconnected ⚠";
+	  format-wifi = "{essid} ({signalStrength}%)  ";
+	  format-ethernet = "{ipaddr}/{cidr} 󰈀 ";
+	  tooltip-format = "{ifname} via {gwaddr} ";
+	  format-linked = "{ifname} (No IP) 󱚵 ";
+	  format-disconnected = "Disconnected 󰖪 ";
 	  format-alt = "{ifname}: {ipaddr}/{cidr}";
 	};
 
