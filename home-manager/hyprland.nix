@@ -11,8 +11,10 @@
       monitor = ",preferred,auto,auto";
 
       env = [
-        "XCURSOR_SIZE,24"
-	"HYPRCURSOR_SIZE,24"
+	# "XCURSOR_THEME,Catppuccin-Mocha-Mauve-Cursors"
+	# "XCURSOR_SIZE,34"
+	# "HYPRCURSOR_THEME,Catppuccin-Mocha-Mauve-Cursors"
+	# "HYPRCURSOR_SIZE,34"
 	"ELECTRON_OZONE_PLATFORM_HINT,wayland"
 	"MOZ_ENABLE_WAYLAND,1"
 	"MOZ_DBUS_REMOTE,1"
@@ -91,7 +93,7 @@
 	  enabled = true;
 	  range = 4;
 	  render_power = 3;
-	  # color = "rgba(1a1a1aee)";
+	  color = "rgba(1a1a1aee)";
 	};
 
 	blur = {
@@ -146,6 +148,10 @@
       misc = {
         force_default_wallpaper = -1;
 	disable_hyprland_logo = false;
+      };
+
+      cursor = {
+        no_hardware_cursors = false;
       };
 
       input = {
