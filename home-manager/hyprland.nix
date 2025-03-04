@@ -21,6 +21,10 @@
 	"MOZ_DBUS_REMOTE,1"
       ];
 
+      exec-once = [
+        "clipse -listen"
+      ];
+
       "$mod" = "SUPER";
 
       bind = [
@@ -29,6 +33,7 @@
 	"$mod, M, exit"
 	# "$mod, E, exec, ${fileManager}"
 	"$mod, Space, exec, ${menu}"
+	"$mod, V, exec, ${terminal} --class clipse -e 'clipse'"
 
 	"$mod, H, movefocus, l"
 	"$mod, J, movefocus, d"
@@ -66,6 +71,8 @@
       windowrulev2 = [
         "suppressevent maximize, class:.*"
 	"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+	"float,class:(clipse)"
+	"size 622 652,class:(clipse)"
       ];
 
       general = {

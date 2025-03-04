@@ -5,6 +5,8 @@
     stateVersion = "24.11";
 
     packages = with pkgs; [
+      wl-clipboard
+      clipse
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
