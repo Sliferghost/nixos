@@ -21,7 +21,7 @@
     ./firefox.nix
     ./fzf.nix
     ./git.nix
-    ./ghostty.nix
+    ./kitty.nix
     ./lazygit.nix
     ./neovim.nix
     ./ssh.nix

@@ -7,12 +7,11 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ghostty.url = "github:ghostty-org/ghostty";
     nur.url = "github:nix-community/nur";
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { nixpkgs, home-manager, ghostty, nur, catppuccin, ... }@inputs : 
+  outputs = { nixpkgs, home-manager, nur, catppuccin, ... }@inputs : 
     let
       system = "x86_64-linux";
     in {
