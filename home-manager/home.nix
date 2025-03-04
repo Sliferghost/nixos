@@ -45,6 +45,7 @@
     ./neovim.nix
     ./ssh.nix
     ./starship.nix
+    ./waybar.nix
     ./wofi.nix
     ./yazi.nix
     ./zoxide.nix

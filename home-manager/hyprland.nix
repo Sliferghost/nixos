@@ -23,6 +23,7 @@
 
       exec-once = [
         "clipse -listen"
+	"waybar"
       ];
 
       "$mod" = "SUPER";

@@ -8,6 +8,7 @@
     kitty.enable = true;
     lazygit.enable = true;
     starship.enable = true;
+    waybar.enable = true;
     yazi.enable = true;
     zsh-syntax-highlighting.enable = true;
   };
