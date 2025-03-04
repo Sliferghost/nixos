@@ -21,6 +21,7 @@
     ./firefox.nix
     ./fzf.nix
     ./git.nix
+    ./hyprland.nix
     ./kitty.nix
     ./lazygit.nix
     ./neovim.nix
