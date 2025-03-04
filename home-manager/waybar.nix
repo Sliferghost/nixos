@@ -23,6 +23,12 @@
 	  "custom/power"
 	];
 
+	"hyprland/workspaces" = {
+	  persistent-workspaces = {
+	    "*" = 10;
+	  };
+	};
+
 	"pulseaudio" = {
 	  format = "{icon} {volume}%";
 	  format-muted = " ";
