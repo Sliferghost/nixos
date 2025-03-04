@@ -4,6 +4,7 @@
 
     settings =
     let
+      cursor = "catppuccin-mocha-mauve-cursors";
       terminal = "kitty";
       fileManager = "";
       menu = "wofi --show drun";
@@ -11,9 +12,9 @@
       monitor = ",preferred,auto,auto";
 
       env = [
-	"XCURSOR_THEME,catppuccin-mocha-sky-cursors"
+	"XCURSOR_THEME,${cursor}"
 	"XCURSOR_SIZE,24"
-	"HYPRCURSOR_THEME,catppuccin-mocha-sky-cursors"
+	"HYPRCURSOR_THEME,${cursor}"
 	"HYPRCURSOR_SIZE,32"
 	# "XCURSOR_THEME,Bibata-Modern-Classic"
 	# "XCURSOR_SIZE,24"
