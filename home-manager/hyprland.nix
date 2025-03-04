@@ -16,10 +16,6 @@
 	"XCURSOR_SIZE,24"
 	"HYPRCURSOR_THEME,${cursor}"
 	"HYPRCURSOR_SIZE,32"
-	# "XCURSOR_THEME,Bibata-Modern-Classic"
-	# "XCURSOR_SIZE,24"
-	# "HYPRCURSOR_THEME,Bibata-Modern-Classic"
-	# "HYPRCURSOR_SIZE,24"
 	"ELECTRON_OZONE_PLATFORM_HINT,wayland"
 	"MOZ_ENABLE_WAYLAND,1"
 	"MOZ_DBUS_REMOTE,1"
@@ -148,11 +144,6 @@
 
       master = {
         new_status = "master";
-      };
-
-      misc = {
-        force_default_wallpaper = -1;
-	disable_hyprland_logo = false;
       };
 
       cursor = {
