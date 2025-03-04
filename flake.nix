@@ -9,9 +9,10 @@
     };
     nur.url = "github:nix-community/nur";
     catppuccin.url = "github:catppuccin/nix";
+    nixvim.url = "github:nix-community/nixvim";
   };
 
-  outputs = { nixpkgs, home-manager, nur, catppuccin, ... }@inputs : 
+  outputs = { nixpkgs, home-manager, nur, catppuccin, nixvim, ... }@inputs : 
     let
       system = "x86_64-linux";
     in {
@@ -28,6 +29,7 @@
 	    modules = [
 		    ./home-manager/home.nix 
 		    catppuccin.homeManagerModules.catppuccin
+		    nixvim.homeManagerModules.nixvim
 	    ];
 	    extraSpecialArgs = { inherit inputs; };
     };
