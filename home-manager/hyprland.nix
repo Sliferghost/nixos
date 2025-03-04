@@ -4,9 +4,9 @@
 
     settings =
     let
-      terminal = pkgs.kitty;
+      terminal = "kitty";
       fileManager = "";
-      menu = "${pkgs.wofi} --show drun";
+      menu = "wofi --show drun";
     in {
       monitor = ",preferred,auto,auto";
 
@@ -24,7 +24,7 @@
         "$mod, Return, exec, ${terminal}"
 	"$mod, C, killactive"
 	"$mod, M, exit"
-	"$mod, E, exec, ${fileManager}"
+	# "$mod, E, exec, ${fileManager}"
 	"$mod, Space, exec, ${menu}"
 
 	"$mod, H, movefocus, l"
@@ -71,14 +71,14 @@
 
 	border_size = 2;
 
-	col.active_border = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-	col.inactive_border = "rgba(595959aa)";
+	"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+	"col.inactive_border" = "rgba(595959aa)";
 
 	resize_on_border = false;
 
 	allow_tearing = false;
 
-	layout = dwindle;
+	layout = "dwindle";
       };
 
       decoration = {
@@ -105,28 +105,33 @@
       animations = {
         enabled = "yes, please :)";
 
-	bezier = "easeOutQuint,0.23,1,0.32,1";
-	bezier = "easeInOutCubic,0.65,0.05,0.36,1";
-	bezier = "linear,0,0,1,1";
-	bezier = "almostLinear,0.5,0.5,0.75,1.0";
-	bezier = "quick,0.15,0,0.1,1";
+	bezier = [
+	  "easeOutQuint,0.23,1,0.32,1"
+	  "easeInOutCubic,0.65,0.05,0.36,1"
+	  "linear,0,0,1,1"
+	  "almostLinear,0.5,0.5,0.75,1.0"
+	  "quick,0.15,0,0.1,1"
+	];
 
-	animation = "global, 1, 10, default";
-	animation = "border, 1, 5.39, easeOutQuint";
-	animation = "windows, 1, 4.79, easeOutQuint";
-	animation = "windowsIn, 1, 4.1, easeOutQuint, popin 87%";
-	animation = "windowsOut, 1, 1.49, linear, popin 87%";
-	animation = "fadeIn, 1, 1.73, almostLinear";
-	animation = "fadeOut, 1, 1.46, almostLinear";
-	animation = "fade, 1, 3.03, quick";
-	animation = "layers, 1, 3.81, easeOutQuint";
-	animation = "layersIn, 1, 4, easeOutQuint, fade";
-	animation = "layersOut, 1, 1.5, linear, fade";
-	animation = "fadeLayersIn, 1, 1.79, almostLinear";
-	animation = "fadeLayersOut, 1, 1.39, almostLinear";
-	animation = "workspaces, 1, 1.94, almostLinear, fade";
-	animation = "workspacesIn, 1, 1.21, almostLinear, fade";
-	animation = "workspacesOut, 1, 1.94, almostLinear, fade";
+	animation = [
+	  "global, 1, 10, default"
+	  "border, 1, 5.39, easeOutQuint"
+	  "windows, 1, 4.79, easeOutQuint"
+	  "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
+	  "windowsOut, 1, 1.49, linear, popin 87%"
+	  "fadeIn, 1, 1.73, almostLinear"
+	  "fadeOut, 1, 1.46, almostLinear"
+	  "fade, 1, 3.03, quick"
+	  "layers, 1, 3.81, easeOutQuint"
+	  "layersIn, 1, 4, easeOutQuint, fade"
+	  "layersOut, 1, 1.5, linear, fade"
+	  "fadeLayersIn, 1, 1.79, almostLinear"
+	  "fadeLayersOut, 1, 1.39, almostLinear"
+	  "workspaces, 1, 1.94, almostLinear, fade"
+	  "workspacesIn, 1, 1.21, almostLinear, fade"
+	  "workspacesOut, 1, 1.94, almostLinear, fade"
+	];
+
       };
 
       dwindle = {
@@ -167,5 +172,6 @@
         name = "epic-mouse-v1";
 	sensitivity = -0.5;
       };
+    };
   };
 }
