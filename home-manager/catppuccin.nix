@@ -1,5 +1,7 @@
 {
-  catppuccin.flavor = "mocha";
-  catppuccin.cursors.enable = true; 
-  catppuccin.bat.enable = true;
+  catppuccin = {
+    flavor = "mocha";
+    bat.enable = true;
+    starship.enable = true;
+  };
 }

@@ -1,5 +1,5 @@
 {
-  programs.bash = {
+  programs.zsh = {
     enable = true;
     shellAliases = 
     let

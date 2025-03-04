@@ -17,7 +17,6 @@
   imports = [
     ./catppuccin.nix
     ./bat.nix
-    ./bash.nix
     ./eza.nix
     ./firefox.nix
     ./fzf.nix
@@ -26,6 +25,8 @@
     ./lazygit.nix
     ./neovim.nix
     ./ssh.nix
+    ./starship.nix
     ./zoxide.nix
+    ./zsh.nix
   ];
 }

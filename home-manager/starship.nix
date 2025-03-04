@@ -1,5 +1,5 @@
 {
-  programs.ghostty = {
+  programs.starship = {
     enable = true;
     enableZshIntegration = true;
   };
