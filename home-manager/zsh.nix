@@ -1,6 +1,10 @@
 {
   programs.zsh = {
     enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
     shellAliases = 
     let
       flakePath = "~/nix";
@@ -16,6 +20,8 @@
       tree = "eza --tree";
       cat = "bat";
       cd = "z";
+
+      lg = "lazygit";
     };
   };
 }
