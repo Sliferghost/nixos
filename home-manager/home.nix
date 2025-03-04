@@ -4,12 +4,18 @@
     homeDirectory = "/home/jaap";
     stateVersion = "24.11";
 
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    ];
+
     pointerCursor = {
       package = pkgs.catppuccin-cursors.mochaMauve;
       name = "catppuccin-mocha-mauve-cursors";
       size = 24;
     };
   };
+
+  fonts.fontconfig.enable = true;
 
   nixpkgs = {
     overlays = [
@@ -29,6 +35,7 @@
     ./git.nix
     ./hyprland.nix
     ./hyprpaper.nix
+    ./hyprlock.nix
     ./kitty.nix
     ./lazygit.nix
     ./neovim.nix
