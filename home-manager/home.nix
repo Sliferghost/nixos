@@ -7,6 +7,7 @@
     packages = with pkgs; [
       wl-clipboard
       clipse
+      pavucontrol
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
