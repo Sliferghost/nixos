@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ pkgs, inputs, ... }: {
   home = {
     username = "jaap";
     homeDirectory = "/home/jaap";
@@ -15,6 +15,7 @@
   };
 
   imports = [
+    ./catppuccin.nix
     ./bat.nix
     ./bash.nix
     ./eza.nix

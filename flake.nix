@@ -9,9 +9,10 @@
     };
     ghostty.url = "github:ghostty-org/ghostty";
     nur.url = "github:nix-community/nur";
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { nixpkgs, home-manager, ghostty, nur, ... }@inputs : 
+  outputs = { nixpkgs, home-manager, ghostty, nur, catppuccin, ... }@inputs : 
     let
       system = "x86_64-linux";
     in {
@@ -27,6 +28,7 @@
 	    pkgs = nixpkgs.legacyPackages.${system};
 	    modules = [
 		    ./home-manager/home.nix 
+		    catppuccin.homeManagerModules.catppuccin
 	    ];
 	    extraSpecialArgs = { inherit inputs; };
     };
