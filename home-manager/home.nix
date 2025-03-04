@@ -45,6 +45,7 @@
     ./ssh.nix
     ./starship.nix
     ./wofi.nix
+    ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
   ];
