@@ -65,7 +65,7 @@
 	  menu-actions = {
 	    lock = "hyprlock";
 	    reboot = "reboot";
-	    shutdown = "shutdown";
+	    shutdown = "shutdown now";
 	  };
 	};
       };
