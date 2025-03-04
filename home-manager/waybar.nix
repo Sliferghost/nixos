@@ -1,11 +1,11 @@
 {
-  # TODO: Fix the power menu
   programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
         layer = "top";
 	position = "top";
+	height = 37;
 	spacing = 10;
 	output = [ "HDMI-A-1" ];
 
@@ -33,19 +33,17 @@
 	};
 
 	"network" = {
-	  #interface = "wlp2*"; # (Optional) To force the use of this interface
-	  format-wifi = "{essid} ({signalStrength}%)  ";
-	  format-ethernet = "{ipaddr}/{cidr} 󰈀 ";
-	  tooltip-format = "{ifname} via {gwaddr} ";
+	  format-wifi = "<span size='13000' foreground='#f5e0dc'>  </span>{essid}";
+	  format-ethernet = "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected";
 	  format-linked = "{ifname} (No IP) 󱚵 ";
-	  format-disconnected = "Disconnected 󰖪 ";
-	  format-alt = "{ifname}: {ipaddr}/{cidr}";
+	  format-disconnected = "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected";
+	  tooltip-format-wifi = "Signal Strenght: {signalStrength}%";
 	};
 
 	"clock" = {
-	  # timezone = "Europe/Amsterdam";
-	  # tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-	  # format-alt = "{:%Y-%m-%d}";
+	  format = "{:%I:%M %p}";
+	  format-alt = "{:%Y-%m-%d}";
+	  tooltip = false;
 	};
 
 	"tray" = {
@@ -54,14 +52,14 @@
 	};
 
 	"custom/power" = {
-	  format = "⏻ ";
+	  format = "⏻";
 	  tooltip = false;
 	  menu = "on-click";
-	  # menu-file = "$HOME/.config/waybar/power_menu.xml";
+	  menu-file = "$HOME/.config/waybar/power_menu.xml";
 	  menu-actions = {
-	    shutdown = "shutdown";
-	    reboot = "reboot";
 	    lock = "hyprlock";
+	    reboot = "reboot";
+	    shutdown = "shutdown";
 	  };
 	};
       };
@@ -71,7 +69,6 @@
 * {
     font-family: "JetBrainMono Nerd Font";
     font-size: 16px;
-    min-height: 0;
     font-weight: bold;
 }
 
@@ -84,13 +81,6 @@ window#waybar {
     border-bottom: 1px solid @overlay1;
 }
 
-#window {
-    margin: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-    color: @lavender;
-    border-bottom: 2px solid @lavender;
-}
 
 button {
     box-shadow: inset 0 -3px transparent;
@@ -136,13 +126,20 @@ button:hover {
 #tray,
 #network,
 #mode,
-#scratchpad {
+#scratchpad,
+#window,
+#custom-power {
   margin-top: 2px;
   margin-bottom: 2px;
   margin-left: 4px;
   margin-right: 4px;
   padding-left: 4px;
   padding-right: 4px;
+}
+
+#window {
+    color: @lavender;
+    border-bottom: 2px solid @lavender;
 }
 
 #clock {
@@ -165,6 +162,12 @@ button:hover {
     border-bottom: 2px solid @yellow;
 }
 
+#custom-power {
+    padding-right: 8px;
+    color: @rosewater;
+    border-bottom: 2px solid @rosewater;
+}
+
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {
     margin-left: 0;
@@ -175,5 +178,33 @@ button:hover {
     margin-right: 0;
 }
     '';
+  };
+
+  home.file.".config/waybar/power_menu.xml" = {
+    text = ''
+  <?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+      <object class="GtkMenuItem" id="lock">
+        <property name="label">Lock</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1"/>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="reboot">
+        <property name="label">Reboot</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="shutdown">
+        <property name="label">Shutdown</property>
+      </object>
+    </child>
+  </object>
+</interface>
+  '';
   };
 }
