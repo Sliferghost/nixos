@@ -31,6 +31,7 @@
   imports = [
     ./catppuccin.nix
     ./bat.nix
+    ./dunst.nix
     ./eza.nix
     ./firefox.nix
     ./fzf.nix
