@@ -3,6 +3,12 @@
     username = "jaap";
     homeDirectory = "/home/jaap";
     stateVersion = "24.11";
+
+    pointerCursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+    };
   };
 
   nixpkgs = {

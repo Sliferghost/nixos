@@ -15,6 +15,10 @@
 	# "XCURSOR_SIZE,34"
 	# "HYPRCURSOR_THEME,Catppuccin-Mocha-Mauve-Cursors"
 	# "HYPRCURSOR_SIZE,34"
+	"XCURSOR_THEME,Bibata-Modern-Classic"
+	"XCURSOR_SIZE,24"
+	"HYPRCURSOR_THEME,Bibata-Modern-Classic"
+	"HYPRCURSOR_SIZE,24"
 	"ELECTRON_OZONE_PLATFORM_HINT,wayland"
 	"MOZ_ENABLE_WAYLAND,1"
 	"MOZ_DBUS_REMOTE,1"
@@ -151,7 +155,7 @@
       };
 
       cursor = {
-        no_hardware_cursors = false;
+        no_hardware_cursors = true;
       };
 
       input = {
