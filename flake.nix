@@ -21,26 +21,35 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, catppuccin, nixvim, ... }@inputs : 
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nur,
+      catppuccin,
+      nixvim,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
-    in {
+    in
+    {
 
-    nixosConfigurations.gaming-pc = nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [ 
-        ./nixos/configuration.nix 
-      ];
-    };
+      nixosConfigurations.gaming-pc = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./nixos/configuration.nix
+        ];
+      };
 
-    homeConfigurations.jaap = home-manager.lib.homeManagerConfiguration {
-	    pkgs = nixpkgs.legacyPackages.${system};
-	    modules = [
-		    ./home-manager/home.nix 
-		    catppuccin.homeManagerModules.catppuccin
-		    nixvim.homeManagerModules.nixvim
-	    ];
-	    extraSpecialArgs = { inherit inputs; };
+      homeConfigurations.jaap = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [
+          ./home-manager/home.nix
+          catppuccin.homeManagerModules.catppuccin
+          nixvim.homeManagerModules.nixvim
+        ];
+        extraSpecialArgs = { inherit inputs; };
+      };
     };
-  };
 }
