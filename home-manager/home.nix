@@ -35,6 +35,8 @@
     ./bat.nix
     ./dunst.nix
     ./eza.nix
+    ./jetbrains.nix
+    ./java.nix
     ./firefox.nix
     ./fzf.nix
     ./git.nix

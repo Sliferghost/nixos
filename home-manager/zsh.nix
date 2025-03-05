@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -24,5 +25,9 @@
 
         lg = "lazygit";
       };
+
+    initExtra = ''
+      export PATH="${pkgs.jdk21}/bin:$PATH"
+    '';
   };
 }
