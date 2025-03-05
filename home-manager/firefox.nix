@@ -28,12 +28,20 @@ in {
 						];
 					}
 					];
-					iconURL = "https://media.licdn.com/dms/image/v2/D5603AQG23cObe6YgcQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723116164570?e=2147483647&v=beta&t=EYRl81Ra-xFzEZ2GyTrNuVjzlYF-ikZ9rc4vWqKzHyk";
+					iconURL = "https://unduck.link/favicon.icon";
 
 					definedDefault = true;
 				};
+				"Google".metaData.hidden = true;
+				"Bing".metaData.hidden = true;
 			};
 		  default = "Unduck";
+
+		  order = [
+		    "Unduck"
+		  ];
+
+		  force = true;
 		};
       };
     };
