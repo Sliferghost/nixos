@@ -1,4 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+{
+  home.packages = [
+    pkgs.nixfmt-rfc-style
+  ];
+
   programs.nixvim = {
     enable = true;
 
@@ -33,9 +38,9 @@
 
       list = false;
       listchars = {
-	    tab = "» ";
-	    trail = "·";
-	    nbsp = "␣";
+        tab = "» ";
+        trail = "·";
+        nbsp = "␣";
       };
 
       inccommand = "split";
@@ -53,16 +58,74 @@
 
       clipboard = {
         providers = {
-	  wl-copy.enable = true;
-	};
-	register = "unnamedplus";
+          wl-copy.enable = true;
+        };
+        register = "unnamedplus";
       };
     };
+
+    autoGroups = {
+      highlight_yank = { };
+    };
+
+    autoCmd = [
+      {
+        desc = "Highlight when yanking text";
+        group = "highlight_yank";
+        event = [ "TextYankPost" ];
+        pattern = "*";
+        callback = {
+          __raw = ''
+            		  function()
+            		    vim.highlight.on_yank()
+            		  end
+            		  '';
+        };
+      }
+    ];
 
     colorschemes.catppuccin = {
       enable = true;
       settings = {
         style = "mocha";
+      };
+    };
+
+    plugins = {
+      sleuth.enable = true;
+
+      gitsigns = {
+        enable = true;
+        settings = {
+          signs = {
+            add.text = "+";
+            change.text = "~";
+            delete.text = "_";
+            topdelete.text = "‾";
+            changedelete.text = "~";
+            untracked.text = "┆";
+          };
+        };
+      };
+
+      conform-nvim = {
+        enable = true;
+        settings = {
+          formatters_by_ft = {
+            nix = [
+              "nixfmt"
+            ];
+          };
+          format_on_save = {
+            timeout_ms = 200;
+            lsp_fallback = false;
+          };
+          formatters = {
+            nixfmt = {
+              command = lib.getExe pkgs.nixfmt-rfc-style;
+            };
+          };
+        };
       };
     };
   };
