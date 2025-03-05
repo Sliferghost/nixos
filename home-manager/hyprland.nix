@@ -76,6 +76,8 @@
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
           "float,class:(clipse)"
           "size 622 652,class:(clipse)"
+          "float,class:(pavucontrol)"
+          "size 800 600,class:(pavucontrol)"
         ];
 
         general = {
