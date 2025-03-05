@@ -64,6 +64,17 @@
       };
     };
 
+    keymaps = [
+      {
+        mode = [ "n" ];
+        key = "<Esc>";
+        action = "<cmd>nohlsearch<CR>";
+        options = {
+          desc = "Clear highlighting on search";
+        };
+      }
+    ];
+
     autoGroups = {
       highlight_yank = { };
     };
@@ -106,6 +117,10 @@
             untracked.text = "┆";
           };
         };
+      };
+
+      which-key = {
+        enable = true;
       };
 
       conform-nvim = {
