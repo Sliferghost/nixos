@@ -56,12 +56,7 @@
       shiftwidth = 0;
       expandtab = false;
 
-      clipboard = {
-        providers = {
-          wl-copy.enable = true;
-        };
-        register = "unnamedplus";
-      };
+      clipboard = "unnamedplus";
     };
 
     keymaps = [
