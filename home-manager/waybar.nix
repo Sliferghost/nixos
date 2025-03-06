@@ -163,13 +163,18 @@
       }
 
       #pulseaudio {
-          color: @blue;
-          border-bottom: 2px solid @blue;
+          color: @teal;
+          border-bottom: 2px solid @teal;
       }
 
       #network {
           color: @yellow;
           border-bottom: 2px solid @yellow;
+      }
+
+      #tray {
+          color: @blue;
+          border-bottom: 2px solid @blue;
       }
 
       #custom-power {

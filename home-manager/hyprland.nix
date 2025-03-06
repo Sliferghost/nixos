@@ -26,6 +26,7 @@
         exec-once = [
           "clipse -listen"
           "waybar"
+          "blueman-applet"
         ];
 
         "$mod" = "SUPER";
@@ -78,6 +79,8 @@
           "size 622 652,class:(clipse)"
           "float,class:(pavucontrol)"
           "size 800 600,class:(pavucontrol)"
+          "float,class:(blueman-manager)"
+          "size 1280 720,class:(blueman-manager)"
         ];
 
         general = {
