@@ -37,6 +37,7 @@
     ./eza.nix
     ./jetbrains.nix
     ./java.nix
+    ./maven.nix
     ./firefox.nix
     ./fzf.nix
     ./git.nix
