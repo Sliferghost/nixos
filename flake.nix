@@ -38,7 +38,14 @@
       nixosConfigurations.gaming-pc = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./nixos/configuration.nix
+          ./nixos/gaming-pc/configuration.nix
+        ];
+      };
+
+      nixosConfigurations.mini-pc = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./nixos/mini-pc/configuration.nix
         ];
       };
 
