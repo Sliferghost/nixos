@@ -55,5 +55,6 @@
     ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
+    ./zen-browser
   ];
 }
