@@ -11,7 +11,7 @@
         flakePath = "~/nix";
       in
       {
-        ns = "sudo nixos-rebuild switch --flake ${flakePath}/#gaming-pc";
+        ns = "sudo nixos-rebuild switch --flake ${flakePath}/#mini-pc";
         ngc = "sudo nix-collect-garbage -d";
         hms = "home-manager switch --flake ${flakePath}/#jaap";
 
