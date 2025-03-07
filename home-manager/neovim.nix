@@ -219,6 +219,8 @@
 
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           bash
+          markdown
+          markdown_inline
           nix
         ];
 
