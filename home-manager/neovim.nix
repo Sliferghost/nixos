@@ -116,6 +116,14 @@
           desc = "[S]earch [/] in Open Files";
         };
       }
+      {
+        mode = [ "n" ];
+        key = "<leader>lg";
+        action = "<cmd>LazyGit<CR>";
+        options = {
+          desc = "[L]azy[G]it";
+        };
+      }
     ];
 
     autoGroups = {
@@ -311,6 +319,10 @@
             };
           };
         };
+      };
+
+      lazygit = {
+        enable = true;
       };
 
       conform-nvim = {
