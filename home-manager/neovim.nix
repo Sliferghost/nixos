@@ -299,6 +299,7 @@
           };
           surround = { };
           files = { };
+          pairs = { };
           statusline = {
             use_icons = true;
             section_location = {
