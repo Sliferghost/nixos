@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     nixfmt-rfc-style
     statix
+    nixd
   ];
 
   programs.nixvim = {
@@ -59,6 +60,15 @@
 
       clipboard = "unnamedplus";
     };
+
+    extraConfigLua = ''
+      local signs = { ERROR = '', WARN = '', INFO = '', HINT = '' }
+      local diagnostic_signs = {}
+      for type, icon in pairs(signs) do
+        diagnostic_signs[vim.diagnostic.severity[type]] = icon
+      end
+      vim.diagnostic.config { signs = { text = diagnostic_signs } }
+    '';
 
     keymaps = [
       {
@@ -123,6 +133,81 @@
         action = "<cmd>LazyGit<CR>";
         options = {
           desc = "[L]azy[G]it";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "gd";
+        action = "require('telescope.builtin').lsp_definitions";
+        options = {
+          desc = "[G]oto [D]efinition";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "gr";
+        action = "require('telescope.builtin').lsp_references";
+        options = {
+          desc = "[G]oto [R]eferences";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "gI";
+        action = "require('telescope.builtin').lsp_implementations";
+        options = {
+          desc = "[G]oto [I]mplementations";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>D";
+        action = "require('telescope.builtin').lsp_type_definitions";
+        options = {
+          desc = "Type [D]efinition";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>ds";
+        action = "require('telescope.builtin').lsp_document_symbols";
+        options = {
+          desc = "[D]ocument [S]ymbols";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>ws";
+        action = "require('telescope.builtin').lsp_dynamic_workspace_symbols";
+        options = {
+          desc = "[W]orkspace [S]ymbols";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "<leader>rn";
+        action = "vim.lsp.buf.rename";
+        options = {
+          desc = "[R]e[n]ame";
+        };
+      }
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "<leader>ca";
+        action = "vim.lsp.buf.code_action";
+        options = {
+          desc = "[C]ode [A]ction";
+        };
+      }
+      {
+        mode = [ "n" ];
+        key = "gD";
+        action = "vim.lsp.buf.declaration";
+        options = {
+          desc = "[G]oto [D]eclaration";
         };
       }
     ];
@@ -318,6 +403,20 @@
                 end
               '';
             };
+          };
+        };
+      };
+
+      fidget = {
+        enable = true;
+      };
+
+      lsp = {
+        enable = true;
+
+        servers = {
+          nixd = {
+            enable = true;
           };
         };
       };
