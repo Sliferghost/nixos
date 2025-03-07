@@ -1,7 +1,8 @@
 { pkgs, lib, ... }:
 {
-  home.packages = [
-    pkgs.nixfmt-rfc-style
+  home.packages = with pkgs; [
+    nixfmt-rfc-style
+    statix
   ];
 
   programs.nixvim = {
@@ -318,6 +319,14 @@
               '';
             };
           };
+        };
+      };
+
+      lint = {
+        enable = true;
+
+        lintersByFt = {
+          nix = [ "statix" ];
         };
       };
 
