@@ -308,27 +308,6 @@
         };
       };
 
-      treesitter = {
-        enable = true;
-
-        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-          bash
-          markdown
-          markdown_inline
-          nix
-        ];
-
-        settings = {
-          highlight = {
-            enable = true;
-          };
-
-          indent = {
-            enable = true;
-          };
-        };
-      };
-
       telescope = {
         enable = true;
 
@@ -449,6 +428,27 @@
             nixfmt = {
               command = lib.getExe pkgs.nixfmt-rfc-style;
             };
+          };
+        };
+      };
+
+      treesitter = {
+        enable = true;
+
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          bash
+          markdown
+          markdown_inline
+          nix
+        ];
+
+        settings = {
+          highlight = {
+            enable = true;
+          };
+
+          indent = {
+            enable = true;
           };
         };
       };

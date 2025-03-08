@@ -35,6 +35,7 @@
     ./bat.nix
     ./dunst.nix
     ./eza.nix
+    ./cursor.nix
     ./jetbrains.nix
     ./java.nix
     ./maven.nix
