@@ -86,6 +86,8 @@
           "size 800 600,class:(pavucontrol)"
           "float,class:(blueman-manager)"
           "size 1280 720,class:(blueman-manager)"
+          "float,class:(nm-connection-editor)"
+          "size 1280 720,class:(nm-connection-editor)"
         ];
 
         general = {

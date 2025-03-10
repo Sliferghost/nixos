@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -20,21 +18,23 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-session --sessions ${pkgs.hyprland}/share/wayland-sessions";
-        user = "greeter";
+  services = {
+    greetd = {
+      enable = true;
+      settings = {
+        default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-session --sessions ${pkgs.hyprland}/share/wayland-sessions";
+          user = "greeter";
+        };
       };
     };
-  };
 
-  services.blueman.enable = true;
+    blueman.enable = true;
 
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
   };
 
   users.users.jaap = {
@@ -47,6 +47,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    networkmanagerapplet
     greetd.tuigreet
     hyprland
     home-manager
