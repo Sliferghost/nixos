@@ -59,6 +59,5 @@
     ./zoxide.nix
     ./zsh.nix
     ./zen-browser.nix
-    ./streaming.nix
   ];
 }
