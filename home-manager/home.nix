@@ -39,6 +39,7 @@
     ./cursor.nix
     ./jetbrains.nix
     ./java.nix
+    ./gaming.nix
     ./maven.nix
     ./fzf.nix
     ./git.nix

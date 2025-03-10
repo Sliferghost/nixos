@@ -51,6 +51,9 @@
         inherit system;
         modules = [
           ./nixos/mini-pc/configuration.nix
+          {
+            nixpkgs.config.allowUnfree = true;
+          }
         ];
       };
 
