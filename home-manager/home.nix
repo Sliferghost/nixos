@@ -40,7 +40,6 @@
     ./jetbrains.nix
     ./java.nix
     ./maven.nix
-    ./gaming.nix
     ./fzf.nix
     ./git.nix
     ./hyprland.nix

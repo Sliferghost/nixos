@@ -37,6 +37,12 @@
     };
   };
 
+  programs = {
+    steam = {
+      enable = true;
+    };
+  };
+
   users.users.jaap = {
     isNormalUser = true;
     extraGroups = [
