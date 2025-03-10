@@ -15,6 +15,9 @@
         ngc = "sudo nix-collect-garbage -d";
         hms = "home-manager switch --flake ${flakePath}/#jaap";
 
+        copy-username = "lpass show --clip --username -F";
+        copy-password = "lpass show --clip --password -F";
+
         n = "nvim";
 
         ls = "eza";
