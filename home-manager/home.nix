@@ -49,6 +49,7 @@
     ./hypridle.nix
     ./kitty.nix
     ./lazygit.nix
+    ./lastpass.nix
     ./neovim.nix
     ./ssh.nix
     ./starship.nix
