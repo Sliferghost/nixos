@@ -14,6 +14,7 @@
         ns = "sudo nixos-rebuild switch --flake ${flakePath}/#mini-pc";
         ngc = "sudo nix-collect-garbage -d";
         hms = "home-manager switch --flake ${flakePath}/#jaap";
+        nu = "sudo nix flake update && ns && hms";
 
         copy-username = "lpass show --clip --username -F";
         copy-password = "lpass show --clip --password -F";
