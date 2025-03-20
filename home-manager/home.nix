@@ -9,8 +9,13 @@
       wl-clipboard
       clipse
       pavucontrol
+      unzip
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
+
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
 
     pointerCursor = {
       package = pkgs.catppuccin-cursors.mochaMauve;
