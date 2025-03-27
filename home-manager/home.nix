@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   home = {
     username = "jaap";
@@ -25,12 +25,6 @@
   };
 
   fonts.fontconfig.enable = true;
-
-  nixpkgs = {
-    overlays = [
-      inputs.nur.overlays.default
-    ];
-  };
 
   imports = [
     ./catppuccin.nix
