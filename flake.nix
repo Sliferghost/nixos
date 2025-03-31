@@ -69,7 +69,7 @@
         inherit pkgs;
         modules = [
           ./home-manager/home.nix
-          catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeModules.catppuccin
           nixvim.homeManagerModules.nixvim
         ];
         extraSpecialArgs = {
