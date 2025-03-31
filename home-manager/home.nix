@@ -10,6 +10,7 @@
       clipse
       pavucontrol
       unzip
+      vlc
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
