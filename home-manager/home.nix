@@ -41,7 +41,7 @@
     ./maven.nix
     ./fzf.nix
     ./git.nix
-    ./google-chrome.nix
+    ./firefox.nix
     ./hyprland.nix
     ./hyprpaper.nix
     ./hyprlock.nix
