@@ -1,12 +1,12 @@
+{ pkgs, inputs, ... }:
 {
-  pkgs,
-  unstable,
-  inputs,
-  ...
-}:
-{
-  home.packages = [
-    unstable.air-formatter
-    inputs.zen-browser.packages."${pkgs.system}".default
+  home.packages = with pkgs; [
+    (inputs.zen-browser.packages."${system}".default.override {
+      extraPolicies = {
+        DisableAppUpdate = true;
+        DisableTelemetry = true;
+      };
+      nativeMessagingHosts = [ pkgs.firefoxpwa ];
+    })
   ];
 }
