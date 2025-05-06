@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }:
 {
   programs.firefox = {
-    enabled = true;
-    package = inputs.firefox-flake.packages."${pkgs.system}".default;
+    enable = true;
+    package = inputs.firefox.packages."${pkgs.system}".firefox-nightly-bin;
 
     profiles."sliferghost" = {
       isDefault = true;
