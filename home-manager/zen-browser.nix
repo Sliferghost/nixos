@@ -1,6 +1,10 @@
-{ pkgs, inputs, ... }:
 {
-  home.packages = with pkgs; [
+  pkgs,
+  inputs,
+  ...
+}:
+{
+  home.packages = [
     inputs.zen-browser.packages."${pkgs.system}".default
   ];
 }
