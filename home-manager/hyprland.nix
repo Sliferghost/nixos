@@ -39,6 +39,7 @@
           "$mod, Space, exec, ${menu}"
           "$mod, V, exec, ${terminal} --class clipse -e 'clipse'"
           "$mod CTRL, Q, exec, hyprlock"
+          "$mod, F, fullscreen, 1"
 
           "$mod, H, movefocus, l"
           "$mod, J, movefocus, d"
