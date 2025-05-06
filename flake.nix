@@ -18,7 +18,6 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     firefox = {
       url = "github:nix-community/flake-firefox-nightly";
@@ -39,14 +38,16 @@
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [ nur.overlays.default ];
-      };
       unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
+      };
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [
+          nur.overlays.default
+        ];
       };
     in
     {
