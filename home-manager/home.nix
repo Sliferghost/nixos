@@ -41,6 +41,7 @@
     ./maven.nix
     ./fzf.nix
     ./git.nix
+    ./google-chrome.nix
     ./hyprland.nix
     ./hyprpaper.nix
     ./hyprlock.nix
@@ -56,6 +57,5 @@
     ./yazi.nix
     ./zoxide.nix
     ./zsh.nix
-    ./zen-browser.nix
   ];
 }
