@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs }:
 {
   home.packages = with pkgs; [
-    heroic
+    godot_4
   ];
 }

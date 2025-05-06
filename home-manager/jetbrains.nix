@@ -2,8 +2,6 @@
 {
   home.packages = with unstable; [
     jetbrains.idea-ultimate
-    jetbrains.rider
-    dotnetCorePackages.sdk_9_0-bin
   ];
 
   home.sessionVariables = {

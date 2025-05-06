@@ -11,7 +11,6 @@
       pavucontrol
       unzip
       vlc
-      unityhub
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
@@ -37,6 +36,7 @@
     ./cursor.nix
     ./jetbrains.nix
     ./java.nix
+    ./godot.nix
     ./gaming.nix
     ./maven.nix
     ./fzf.nix
