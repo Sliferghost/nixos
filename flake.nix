@@ -16,13 +16,8 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-    };
-    firefox = {
-      url = "github:nix-community/flake-firefox-nightly";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs =
@@ -33,7 +28,7 @@
       nur,
       catppuccin,
       nixvim,
-      firefox,
+      zen-browser,
       ...
     }@inputs:
     let
@@ -73,6 +68,7 @@
         inherit pkgs;
         modules = [
           ./home-manager/home.nix
+          zen-browser.homeModules.beta
           catppuccin.homeModules.catppuccin
           nixvim.homeManagerModules.nixvim
         ];
