@@ -68,7 +68,6 @@
         inherit pkgs;
         modules = [
           ./home-manager/home.nix
-          zen-browser.homeModules.beta
           catppuccin.homeModules.catppuccin
           nixvim.homeManagerModules.nixvim
         ];

@@ -1,9 +1,6 @@
+{ pkgs, inputs, ... }:
 {
-  programs.zen-browser = {
-    enable = true;
-    extraPolicies = {
-      DisableAppUpdate = true;
-      DisableTelemetry = true;
-    };
-  };
+  home.packages = [
+    inputs.zen-browser.packages."${pkgs.system}".default
+  ];
 }
