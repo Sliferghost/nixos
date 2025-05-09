@@ -91,8 +91,10 @@
           "size 1280 720,class:(blueman-manager)"
           "float,class:(nm-connection-editor)"
           "size 1280 720,class:(nm-connection-editor)"
-          "size 65% 50%,class:(Godot),floating:1"
-          "center,class:(Godot),floating:1"
+          "size 65% 50%,class:(Godot),title:^(Create New Node)$"
+          "center,class:(Godot),title:^(Create New Node)$"
+          "size 65% 50%,class:(Godot),title:^(Project Settings)$"
+          "center,class:(Godot),title:^(Project Settings)$"
         ];
 
         general = {
