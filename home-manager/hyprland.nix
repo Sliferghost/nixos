@@ -40,6 +40,7 @@
           "$mod, V, exec, ${terminal} --class clipse -e 'clipse'"
           "$mod CTRL, Q, exec, hyprlock"
           "$mod, F, fullscreen, 1"
+          "$mod, T, togglefloating"
 
           "$mod, H, movefocus, l"
           "$mod, J, movefocus, d"
@@ -90,6 +91,8 @@
           "size 1280 720,class:(blueman-manager)"
           "float,class:(nm-connection-editor)"
           "size 1280 720,class:(nm-connection-editor)"
+          "size 65% 50%,class:(Godot),floating:1"
+          "center,class:(Godot),floating:1"
         ];
 
         general = {
