@@ -83,6 +83,7 @@
         windowrulev2 = [
           "suppressevent maximize, class:.*"
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+          "size 65% 50%,floating:1"
           "float,class:(clipse)"
           "size 622 652,class:(clipse)"
           "float,class:(pavucontrol)"
@@ -91,18 +92,6 @@
           "size 1280 720,class:(blueman-manager)"
           "float,class:(nm-connection-editor)"
           "size 1280 720,class:(nm-connection-editor)"
-          "size 65% 50%,class:(Godot),title:^(Create New Node)$"
-          "center,class:(Godot),title:^(Create New Node)$"
-          "size 65% 50%,class:(Godot),title:^(Project Settings)$"
-          "center,class:(Godot),title:^(Project Settings)$"
-          "size 65% 50%,class:(Godot),title:^(Save.*)$"
-          "center,class:(Godot),title:^(Save.*)$"
-          "size 50% 60%,class:(Godot),title:^(Attach Node Script)$"
-          "center,class:(Godot),title:^(Attach Node Script)$"
-          "size 50% 60%,class:(Godot),title:^(Connect a Signal to a Method)$"
-          "center,class:(Godot),title:^(Connect a Signal to a Method)$"
-          "size 65% 50%,class:(Godot),title:^(Select a Node)$"
-          "center,class:(Godot),title:^(Select a Node)$"
         ];
 
         general = {
