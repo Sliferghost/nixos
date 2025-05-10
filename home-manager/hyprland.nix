@@ -101,6 +101,8 @@
           "center,class:(Godot),title:^(Attach Node Script)$"
           "size 50% 60%,class:(Godot),title:^(Connect a Signal to a Method)$"
           "center,class:(Godot),title:^(Connect a Signal to a Method)$"
+          "size 65% 50%,class:(Godot),title:^(Select a Node)$"
+          "center,class:(Godot),title:^(Select a Node)$"
         ];
 
         general = {
