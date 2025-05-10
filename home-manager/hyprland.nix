@@ -95,6 +95,12 @@
           "center,class:(Godot),title:^(Create New Node)$"
           "size 65% 50%,class:(Godot),title:^(Project Settings)$"
           "center,class:(Godot),title:^(Project Settings)$"
+          "size 65% 50%,class:(Godot),title:^(Save.*)$"
+          "center,class:(Godot),title:^(Save.*)$"
+          "size 50% 60%,class:(Godot),title:^(Attach Node Script)$"
+          "center,class:(Godot),title:^(Attach Node Script)$"
+          "size 50% 60%,class:(Godot),title:^(Connect a Signal to a Method)$"
+          "center,class:(Godot),title:^(Connect a Signal to a Method)$"
         ];
 
         general = {
