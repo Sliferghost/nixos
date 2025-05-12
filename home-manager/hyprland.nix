@@ -39,7 +39,6 @@
           "$mod, Space, exec, ${menu}"
           "$mod, V, exec, ${terminal} --class clipse -e 'clipse'"
           "$mod CTRL, Q, exec, hyprlock"
-          "$mod, F, fullscreen, 1"
           "$mod, T, togglefloating"
 
           "$mod, H, movefocus, l"
@@ -103,6 +102,8 @@
           "center,class:(Godot),title:^(Connect a Signal to a Method)$"
           "size 65% 50%,class:(Godot),title:^(Select a Node)$"
           "center,class:(Godot),title:^(Select a Node)$"
+          "size 65% 50%,class:(Godot),title:^(Select Scene)$"
+          "center,class:(Godot),title:^(Select Scene)$"
         ];
 
         general = {
