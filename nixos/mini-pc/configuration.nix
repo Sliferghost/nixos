@@ -35,6 +35,11 @@
       enable = true;
       pulse.enable = true;
     };
+
+    libinput = {
+      enable = true;
+      mouse.naturalScrolling = true;
+    };
   };
 
   programs = {
