@@ -30,7 +30,7 @@
         lg = "lazygit";
       };
 
-    initExtra = ''
+    initContent = ''
       export PATH="${pkgs.jdk21}/bin:$PATH"
 
       # pnpm

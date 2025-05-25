@@ -3,7 +3,7 @@
   home = {
     username = "jaap";
     homeDirectory = "/home/jaap";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
 
     packages = with pkgs; [
       wl-clipboard
@@ -11,7 +11,6 @@
       pavucontrol
       unzip
       vlc
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
     sessionVariables = {
