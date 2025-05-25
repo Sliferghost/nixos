@@ -11,7 +11,6 @@
       pavucontrol
       unzip
       vlc
-      logiops
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
