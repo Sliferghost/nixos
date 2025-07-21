@@ -48,12 +48,16 @@
     };
   };
 
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+
   users.users.jaap = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
       "networkmanager"
       "input"
+      "vboxusers"
     ];
   };
 
