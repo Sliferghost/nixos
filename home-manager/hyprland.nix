@@ -90,8 +90,6 @@
           "size 1280 720,class:(blueman-manager)"
           "float,class:(nm-connection-editor)"
           "size 1280 720,class:(nm-connection-editor)"
-          "size 55% 65%,class:(Godot),title:.+"
-          "center,class:(Godot),title:.+"
         ];
 
         general = {
