@@ -35,7 +35,6 @@
     ./cursor.nix
     ./jetbrains.nix
     ./java.nix
-    ./godot.nix
     ./gaming.nix
     ./maven.nix
     ./fzf.nix
